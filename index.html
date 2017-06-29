@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Custom Style Sheet-->
+        <link rel='stylesheet' href='../style.css' />
+        <link href="https://fonts.googleapis.com/css?family=Poppins:500" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--Socket IO-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <!--Bootsrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--Client Side-->
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!--Login-->
+        
+        <div id="loginSection">
+            <div class="welcome">
+                <h1>Welcome to Luigi/Mario chat!</h1>
+                <p>Be one of them. Type Mario or Luigi and start a conversation.</p>
+            </div>
+            <input class="loginInput" id="name">
+            <button type="submit" class="btn btn-info" id="login" >Login</button>
+        </div>
+        <!--Displaying username after login action-->
+        
+        <div id="userName"></div>
+        
+        <!--Main Section of Chat-->
+        
+        <div id="container">
+            <h1>Choose options, write it and send it..</h1>
+            
+        <!--Topic selection-->
+            
+        <div class="topicSection">
+                <select id="topic">
+                <option select hidden>Topic</option>
+                <option type="reset" value="Sports">Sports</option>
+                <option type="reset" value="American Football">American Football</option>
+            </select>
+        </div>
+            
+        <!--Area for message-->
+            
+            <div class="wrapper">
+                <textarea placeholder="Write it.." id="msg"></textarea>
+        
+        <!--User list-->
+        <div class="recieverSections">
+                <select id="userList">
+                    <option select hidden>Receiver</option>
+                    <option value="Luigi">Luigi</option>
+                    <option value="Mario">Mario</option>
+                </select>
+        </div>                
+                <button class="btn btn-primary" id="sendMsg">Send it!</button>
+            </div>
+            
+        <!--Topic, message data and user name-->
+            <div id="sender"></div>
+            
+            <!--Clear chat window button-->
+            <button id="clearChat" class="btn btn-danger">Clear</button>
+            <div id="messages">    
+                <div id="topicBox"></div>
+                <div id="messagedata"></div>
+            </div>
+        </div>
+    </body>
+</html>
